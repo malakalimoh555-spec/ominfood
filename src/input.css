@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  The only plain CSS left. Tailwind has no utility for "every element",
+  so the original global focus ring is kept as a base rule.
+*/
+@layer base {
+  *:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.5rem rgba(230, 125, 34, 0.5);
+  }
+
+  .cta *:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.5rem rgba(253, 242, 233, 0.5);
+  }
+}
